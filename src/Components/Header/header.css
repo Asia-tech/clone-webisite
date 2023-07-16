@@ -1,0 +1,128 @@
+.header-sec .sticky {
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #000;
+  position: fixed;
+  opacity: 1;
+}
+.header-row {
+  max-width: 1300px;
+}
+.header {
+  padding: 2rem;
+  margin: 0 auto;
+}
+.large-screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .logo img {
+  width: 150px;
+}
+.navbar {
+  display: flex;
+}
+.header .hover-icon {
+  position: relative;
+}
+
+.header .nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header button {
+  background: none;
+  border: none;
+  color: #fff;
+}
+.header button:not(:last-child) {
+  margin: 0 3rem;
+}
+.header a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+.header .toggle-icon {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-left: 0.5rem;
+}
+
+/* _____Media Query_______ */
+@media screen and (max-width: 900px) {
+  .toggleNavWrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .toggleNavbar .icon {
+    position: absolute;
+    /* top: 2rem; */
+    right: 1rem;
+    color: #eee;
+    font-size: 2rem;
+    width: 3rem;
+    height: 2.5rem;
+  }
+  .toggle-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar,
+  .left-btn {
+    display: none;
+  }
+  .toggleNav {
+    display: block;
+  }
+
+  .toggle-navigation {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem 4rem 3rem 4rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+    background: #000;
+  }
+
+  .activeNavbar {
+    transform: translateY(0);
+  }
+  .header button:not(:last-child) {
+    margin: 2rem;
+  }
+  .toggleNavWrapper {
+    position: relative;
+  }
+
+  .closeNavbar {
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 901px) {
+  .toggleNav,
+  .toggleNavbar,
+  .closeNavbar {
+    display: none;
+  }
+}
